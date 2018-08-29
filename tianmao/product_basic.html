@@ -6,6 +6,43 @@
         <link type="text/css" href="BootStrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet" />
         <script type="text/javascript" src="BootStrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
         <title>1</title>
+        <script>
+            $(function () {
+                var stock = 66;
+                $('.productNumberSetting').keyup(function () {
+                    var num = $(this).val();
+                    num = parseInt(num);
+                    if (isNaN(num)) {
+                        num = 1;
+                    }
+                    if (num <= 0) {
+                        num = 1;
+                    }
+                    if (num > stock) {
+                        num = stock;
+                    }
+                    $(this).val(num);
+                })
+                $('.increaseNumber').click(function () {
+                    var num = $('.productNumberSetting').val();
+                    num = parseInt(num);
+                    num++;
+                    if (num > stock) {
+                        num = stock;
+                    }
+                    $('.productNumberSetting').val(num);
+                })
+                $('.decreaseNumber').click(function () {
+                    var num = $('.productNumberSetting').val();
+                    num = parseInt(num);
+                    num--;
+                    if (num <= 0) {
+                        num = 1;
+                    }
+                    $('.productNumberSetting').val(num);
+                })
+            })
+        </script>
     </head>
     <body>
         <style>
