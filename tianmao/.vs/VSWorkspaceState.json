@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\img",
+    "\\img\\site"
   ],
-  "SelectedNode": "\\product_detail.html",
+  "SelectedNode": "\\cart.html",
   "PreviewInSolutionExplorer": false
 }
