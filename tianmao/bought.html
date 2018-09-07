@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            123
+        </title>
+        <script src="BootStrap/js/jquery/2.0.0/jquery.min.js"></script>
+        <link href="BootStrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+        <script src="BootStrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <style>
+            .body{
+                font-size:12px;
+                font-family:Arial;
+            }
+            .boughtDiv{
+                margin:10px auto;
+                max-width:1013px;
+            }
+            div.orderType div{
+                float:left;
+                border-bottom:2px solid #E8E8E8;
+            }
+            div.orderType a{
+                font-size:16px;
+                border-right:1px solid #E8E8E8;
+                padding:0px 20px;
+                color:black;
+                font-weight:bold;
+                margin-bottom:10px;
+                display:block;
+                text-decoration:none;
+            }
+            div.orderType a:hover{
+                color:#C40000;
+                text-decoration:none;
+            }
+            div.orderType div.selectedOrderType{
+                border-bottom:2px solid #C40000;
+            }
+            div.orderType div.selectedOrderType a{
+                color:#C40000;
+            }
+            div.orderType a.noRightborder{
+                border-right-width:0px !important;
+            }
+            table.orderListTitleTable{
+                background-color:#F5F5F5;
+                border:1px solid #E8E8E8;
+                margin:20px 0px;
+                width:100%;
+                text-align:center;
+                font-size:12px;
+            }
+            table.orderListTitleTable td{
+                padding:12px 0px;
+            }
+        </style>
+        <div class="boughtDiv">
+            <div class="orderType">
+                <div class="selectedOrderType"><a href="#" orderstatus="all">所有订单</a></div>
+                <div><a href="#" orderstatus="waitplay">待付款</a></div>
+                <div><a href="#" orderstatus="waitDelivery">待发货</a></div>
+                <div><a href="#" orderstatus="waitConfirm">待收货</a></div>
+                <div><a class="noRightborder" href="#" orderstatus="waitReview">待评价</a></div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="orderListTitleTable">
+                <table class="orderListTitleTable">
+                    <tbody>
+                        <tr>
+                            <td>宝贝</td>
+                            <td width="100">单价</td>
+                            <td width="100">数量</td>
+                            <td width="100">实付款</td>
+                            <td width="100">交易操作</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="orderListItem">
+                <table oid="946" orderstatus="waitReview" class="orderListItemTable">
+                    <tbody>
+                        <tr class="orderListItemFirstTR">
+                            <td colspan="2">
+                                <b>2016-09-02 17:00:41</b>
+                                <span>订单号：20160912170041674794</span>
+                            </td>
+                            <td colspan="2">
+                                <img width="13" src="img/site/orderItemTmall.png" />天猫商场
+                            </td>
+                            <td>
+                                <a href="#" class="wangwanglink">
+                                    <div class="orderItemWangWangGif"></div>
+                                </a>
+                            </td>
+                            <td class="orderItemDeleteTD">
+                                <a href="#" oid="946" class="deleteOrderLink">
+                                    <span class="orderListItemDelete glyphicon glyphicon-trash"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

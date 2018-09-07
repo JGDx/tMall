@@ -1,11 +1,93 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>12</title>
+        <title>123</title>
         <script src="BootStrap/js/jquery/2.0.0/jquery.min.js"></script>
         <link href="BootStrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
         <script src="BootStrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
         <script>
+            $(function () {
+                
+                $('img.cartProductItemIfSelected').click(function () {
+                    console.log(1);
+                    var selectit = $(this).attr("selectit");
+                    if ("selectit" == selectit) {
+                        $(this).attr('src', 'img/site/cartNotSelected.png');
+                        $(this).attr("selectit", "false");
+                        $(this).parents('tr.cartProductItemTR').css('background-color', '#fff');
+                    } else {
+                        $(this).attr('src', 'img/site/cartSelected.png');
+                        $(this).attr("selectit", "selectit");
+                        $(this).parents('tr.cartProductItemTR').css('background-color', '#FFF8E1');
+                    }
+                    syncSelect();
+                    syncCreateOrderButton();
+                    calcCartSumPriceAndNumber();
+                })
+                $('img.selectAllItem').click(function () {
+                    var selectit = $(this).attr('selectit');
+                    if ('selectit' == selectit) {
+                        $('img.selectAllItem').attr('selectit', 'false');
+                        $('img.selectAllItem').attr('src', 'img/site/cartNotSelected.png');
+                        $('img.cartProductItemIfSelected').each(function () {
+                            console.log(1); 
+                            $(this).attr('selectit', 'false');
+                            $(this).attr('src', 'img/site/cartNotSelected.png');
+                            $(this).parents('tr.cartProductItemTR').css('background-color', '#fff');
+                        })
+                    } else {
+                        $('img.selectAllItem').attr('selectit', 'selectit');
+                        $('img.selectAllItem').attr('src', 'img/site/cartSelected.png');
+                        $('img.cartProductItemIfSelected').each(function () {
+                            console.log(2);
+                            $(this).attr('selectit', 'selectit');
+                            $(this).attr('src', 'img/site/cartSelected.png');
+                            $(this).parents('tr.cartProductItemTR').css('background-color', '#FFF8E1');
+                        })
+                    }
+                    syncCreateOrderButton();
+                    calcCartSumPriceAndNumber();
+                })
+                $('.numberMinus').click(function () {
+                    var pid = $(this).attr('pid');
+                    var stock = $('span.orderItemStock[pid=' + pid + ']').text();
+                    var price = $('span.orderItemPromotePrice[pid=' + pid + ']').text();
+                    var num = $('.orderItemNumberSetting[pid=' + pid + ']').val();
+                    if (--num <= 0) {
+                        num = 1;
+                    }
+                    syncPrice(pid, num, price);
+                })
+                $('.numberPlus').click(function () {
+                    var pid = $(this).attr('pid');
+                    var stock = $('span.orderItemStock[pid=' + pid + ']').text();
+                    var price = $('span.orderItemPromotePrice[pid=' + pid + ']').text();
+                    var num = $('.orderItemNumberSetting[pid=' + pid + ']').val();
+                    num++;
+                    console.log('stoke:'+stock+'  num:'+num); 
+                    if (num > stock) {
+                        num = stock;
+                    }
+                    syncPrice(pid, num, price);
+                })
+                $('input.orderItemNumberSetting').keyup(function () {
+                    var pid = $(this).attr('pid');
+                    var stock = $('span.orderItemStock[pid=' + pid + ']').text();
+                    var price = $('span.orderItemPromotePrice[pid=' + pid + ']').text();
+                    var num = $('.orderItemNumberSetting[pid=' + pid + ']').val();
+                    num = parseInt(num);
+                    if (isNaN(num)) {
+                        num = 1;
+                    }
+                    if (num <= 0) {
+                        num = 1;
+                    }
+                    if (num > stock) {
+                        num = stock;
+                    }
+                    syncPrice(pid, num, price);
+                })
+            });
             function formatMoney(num){
                 num = num.toString().replace(/\$|\,/g,'');  
                 if(isNaN(num))  
@@ -38,15 +120,17 @@
             }
             function syncSelect() {
                 var selectAll = true;
-                $('.cartProductItemIfSelected').each(function{
-                    if ("false" == $(this).attr('selectit') {
+                $('.cartProductItemIfSelected').each(function(){
+                    if ("false" == $(this).attr('selectit')) {
                         selectAll = false;
                     }
                 });
                 if (selectAll) {
-                    $('img.selectAllItem').attr("src", "http://127.0.0.1/tmall/img/site/cartSelected.png");
+                    $('img.selectAllItem').attr("src", "img/site/cartSelected.png");
+                    $('img.selectAllItem').attr('selectit', 'selectit');
                 } else {
-                    $('img.selectAllItem').attr("src", "http://127.0.0.1/tmall/img/site/cartNotSelected.png");
+                    $('img.selectAllItem').attr("src", "img/site/cartNotSelected.png");
+                    $('img.selectAllItem').attr('selectit', 'false');
                 }
             }
             function calcCartSumPriceAndNumber() {
@@ -66,11 +150,12 @@
                 $('span.cartSumNumber').html(totalNumber);
             }
             function syncPrice(pid, num, price) {
-                $('.orderItemNumberSetting[pid' + pid=']').val(num);
+                $('.orderItemNumberSetting[pid=' + pid+']').val(num);
                 var cartProductItemSmallSumPrice = formatMoney(num * price);
-                $('.cartProductItemSmallSumPrice[pid' + pid + ']').html("гд" + cartProductItemSmallSumPrice);
+                $('.cartProductItemSmallSumPrice[pid=' + pid + ']').html("гд" + cartProductItemSmallSumPrice);
                 calcCartSumPriceAndNumber();
             }
+            
         </script>
     </head>
     <body>
@@ -269,7 +354,7 @@
                             <td>
                                 <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="cartProductItemIfSelected" oiid="935" selectit="false">
                                 <a href="#nowhere" style="display:none"><img src="http://how2j.cn/tmall/img/site/cartSelected.png"></a>
-                                <img width="40px" src="http://how2j.cn/tmall/img/productSingle_middle/8510.jpg" class="cartProductImg">
+                                <img width="40" src="http://how2j.cn/tmall/img/productSingle_middle/8510.jpg" class="cartProductImg">
                             </td>
                             <td>
                                 <div class="cartProductLinkOutDiv">
