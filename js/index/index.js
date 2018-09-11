@@ -1,7 +1,7 @@
 $(function () {
     $('div.rightMenu span').mouseenter(function () {
         var left = $(this).position().left;
-        var top = $(this).position().top;
+        var top = $(this).position().top+163;
         var width = $(this).css("width");
         var destLeft = parseInt(left) + parseInt(width) / 2;
         console.log("left:" + left + ",top:" + top + ",width:" + width + ",destLeft" + destLeft);
