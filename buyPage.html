@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        
         <title>1</title>
         <script src="BootStrap/js/jquery/2.0.0/jquery.min.js"></script>
         <link href="BootStrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +58,7 @@
             }
             table.productListTable th{
                 color:#999999;
-                font-family:ËÎÌå;
+                font-family:å®‹ä½“;
                 font-weight:normal;
                 font-size:12px;
                 text-align:center;
@@ -77,15 +78,132 @@
             a.marketLink{
                 color:black;
                 font-size:12px;
-                font-family:ËÎÌå;
+                font-family:å®‹ä½“;
                 font-weight:normal;
             }
             a.marketLink:hover{
                 color:black;
                 font-size:12px;
                 text-decoration:underline;
-                font-family:ËÎÌå;
+                font-family:å®‹ä½“;
                 font-weight:normal;
+            }
+            span.wangwangGif{
+                display:inline-block;
+                width:25px;
+                height:25px;
+                background-image:url("img/site/wangwang.gif");
+                background-repeat:no-repeat;
+                background-color:transparent;
+                background-attachment:scroll;
+                background-position:-83px -0px;
+                position:relative;
+                top:8px;
+                left:2px;
+            }
+            tbody.productListTableTbody td{
+                text-align:center;
+                
+            }
+            tbody.productListTableTbody td.orderItemFirstTD{
+                text-align:left;
+            }
+            tr.orderItemTR td{
+                border-bottom:1px solid #E5E5E5;
+                padding:10px 0px;
+            }
+            tr.orderItemTR td{
+                padding:10px 0px;
+                text-align:center;
+            }
+
+            img.orderItemImg{
+                width:50px;
+                height:50px;
+                border:1px solid #E9E9E9;
+            }
+            td.orderItemProductInfo{
+                text-align:left !important;
+            }
+            td.orderItemProductInfo img{
+                height:16px;
+            }
+            a.orderItemProductLink{
+                color:#666666;
+                display:block;
+            }
+            a.orderItemProductLink:hover{
+                color:#666666;
+                text-decoration:underline;
+            }
+            span.orderorderItemProductPrice,span.orderItemProductNumber{
+                color:#000000;
+            }
+            span.orderItemUnitSum{
+                color:#CC0000;
+                font-weight:bold;
+            }
+            td.orderItemFirstTD,td.orderItemLastTD{
+                border-bottom:0px solid black !important;
+            }
+            label.orderItemDeliveryLabel{
+                font-weight:normal;
+                font-size:12px;
+                font-family:å®‹ä½“;
+                color:#666666;
+            }
+            select.orderItemDeliverySelect{
+                width:100px;
+                height:23px;
+            }
+            div.orderItemSumDiv{
+                padding:20px;
+                border-top:2px solid #B4D0FF;
+                background-color:#F2F6FF;
+                height:50px;
+            }
+            div.orderItemSumDiv span{
+                color:#999999;
+            }
+            span.leaveMessageText{
+                display:inline-block;
+                margin-right:10px;
+                float:left;
+            }
+            div.orderItemTotalSumDiv{
+                margin:40px;
+                height:40px;
+            }
+            div.submitOrderDiv{
+                height:40px;
+                margin:20px 0px;
+            }
+            div.orderItemTotalSumDiv span{
+                color:#999999;
+            }
+            span.orderItemTotalSumSpan{
+                color:#C40000 !important; 
+                font-size:22px;
+                font-weight:bold;
+                border-bottom:1px dotted #F2F6FF;
+            }
+            button.submitOrderButton{
+                border:1px solid #C40000;
+                background-color:#C40000;
+                text-align:center;
+                line-height:40px;
+                color:white;
+                font-size:14px;
+                font-weight:700;
+                float:right;
+                display:inline-block;
+                margin:0px 10px;
+                width:180px;
+                height:40px;
+            }
+            body{
+                font-size:12px;
+                font-family:Arial;
             }
         </style>
     </head>
@@ -97,44 +215,44 @@
                 <div style="clear:both;"></div>
             </div>
             <div class="address">
-                <div class="addressTip">ÊäÈëÊÕ»õµØÖ·</div>
+                <div class="addressTip">è¾“å…¥æ”¶è´§åœ°å€</div>
                 <div>
                     <table class="addressTable">
                         <tbody>
                             <tr>
-                                <td class="firstColumn">ÏêÏ¸µØÖ·<span class="redStar">*</span></td>
-                                <td><textarea placeholder="½¨ÒéÄúÈçÊµÌîĞ´ÊÕ»õµØÖ·£¬ÀıÈç½ÖµÀÃû³Æ£¬ÃÅÅÆºÅÂë£¬Â¥²ãºÍ·¿¼äºÅµÈĞÅÏ¢"></textarea></td>
+                                <td class="firstColumn">è¯¦ç»†åœ°å€<span class="redStar">*</span></td>
+                                <td><textarea placeholder="å»ºè®®æ‚¨å¦‚å®å¡«å†™æ”¶è´§åœ°å€ï¼Œä¾‹å¦‚è¡—é“åç§°ï¼Œé—¨ç‰Œå·ç ï¼Œæ¥¼å±‚å’Œæˆ¿é—´å·ç­‰ä¿¡æ¯"></textarea></td>
                             </tr>
                             <tr>
-                                <td>ÓÊÕş±àÂë</td>
-                                <td><input type="text" placeholder="Èç¹ûÄã²»Çå³şÓÊµİÇøºÅ£¬ÇëÌîĞ´000000" /></td>
+                                <td>é‚®æ”¿ç¼–ç </td>
+                                <td><input type="text" placeholder="å¦‚æœä½ ä¸æ¸…æ¥šé‚®é€’åŒºå·ï¼Œè¯·å¡«å†™000000" /></td>
                             </tr>
                             <tr>
-                                <td>ÊÕ»õÈËĞÕÃû<span class="redStar">*</span></td>
-                                <td><input type="text" placeholder="³¤¶È²»³¬¹ı25¸ö×Ö·û" /></td>
+                                <td>æ”¶è´§äººå§“å<span class="redStar">*</span></td>
+                                <td><input type="text" placeholder="é•¿åº¦ä¸è¶…è¿‡25ä¸ªå­—ç¬¦" /></td>
                             </tr>
                             <tr>
-                                <td>ÊÖ»úºÅÂë<span class="redStar">*</span></td>
-                                <td><input type="text" placeholder="ÇëÊäÈë11Î»ÊÖ»úºÅÂë" /></td>
+                                <td>æ‰‹æœºå·ç <span class="redStar">*</span></td>
+                                <td><input type="text" placeholder="è¯·è¾“å…¥11ä½æ‰‹æœºå·ç " /></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="productList">
-                <div class="productListTip">È·ÈÏ¶©µ¥ĞÅÏ¢</div>
+                <div class="productListTip">ç¡®è®¤è®¢å•ä¿¡æ¯</div>
                 <table class="productListTable">
                     <thead>
                         <tr>
-                            <th class="productListTableFirstColumn" colspan="2">
+                            <th style="width:532px" class="productListTableFirstColumn" colspan="2">
                                 <img src="img/site/tmallbuy.png" class="tmallbuy" />
-                                <a href="#" class="marketLink">µêÆÌ£ºÌìÃ¨µêÆÌ</a>
+                                <a href="#" class="marketLink">åº—é“ºï¼šå¤©çŒ«åº—é“º</a>
                                 <a href="#" class="wangwanglink"><span class="wangwangGif"></span></a>
                             </th>
-                            <th>µ¥¼Û</th>
-                            <th>ÊıÁ¿</th>
-                            <th>Ğ¡¼Æ</th>
-                            <th>ÅäËÍ·½Ê½</th>
+                            <th style="width:92px">å•ä»·</th>
+                            <th style="width:44px">æ•°é‡</th>
+                            <th style="width:92px">å°è®¡</th>
+                            <th style="width:260px">é…é€æ–¹å¼</th>
                         </tr>
                         <tr class="rowborder">
                             <td colspan="2"></td>
@@ -150,48 +268,48 @@
                                 <img width="20" src="http://how2j.cn/tmall/img/productSingle_middle/4206.jpg" class="orderItemImg" />
                             </td>
                             <td class="orderItemProductInfo">
-                                <a class="orderItemProductLink" href="#">Philips/·ÉÀûÆÖ HR1897/30ÆÆ±ÚÎ¢Õ¥Ô­Ö­»ú ¶à¹¦ÄÜ¼ÒÓÃ¹ûÖ­Õ¥Ö­»ú</a>
-                                <img title="Ö§³ÖĞÅÓÃ¿¨Ö§¸¶" src="img/site/creditcard.png" />
-                                <img title="Ïû·ÑÕß±£ÕÏ·şÎñ,³ĞÅµ7ÌìÍË»õ" src="img/site/7day.png">
-                                <img title="Ïû·ÑÕß±£ÕÏ·şÎñ,³ĞÅµÈçÊµÃèÊö" src="img/site/promise.png">
+                                <a class="orderItemProductLink" href="#">Philips/é£åˆ©æµ¦ HR1897/30ç ´å£å¾®æ¦¨åŸæ±æœº å¤šåŠŸèƒ½å®¶ç”¨æœæ±æ¦¨æ±æœº</a>
+                                <img title="æ”¯æŒä¿¡ç”¨å¡æ”¯ä»˜" src="img/site/creditcard.png" />
+                                <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡,æ‰¿è¯º7å¤©é€€è´§" src="img/site/7day.png">
+                                <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡,æ‰¿è¯ºå¦‚å®æè¿°" src="img/site/promise.png">
                             </td>
                             <td>
-                                <span class="orderItemProductPrice">£¤3,514.05</span>
+                                <span class="orderItemProductPrice">ï¿¥3,514.05</span>
                             </td>
                             <td>
                                 <span class="orderItemProductNumber">2</span>
                             </td>
                             <td>
-                                <span class="orderItemUnitSum">£¤7,028.10</span>
+                                <span class="orderItemUnitSum">ï¿¥7,028.10</span>
                             </td>
                             <td class="orderItemLastTD" rowspan="2">
                                 <label class="orderItemDeliveryLabel">
                                     <input type="radio" checked="checked" value="" />
-                                    ÆÕÍ¨ÅäËÍ
+                                    æ™®é€šé…é€
                                 </label>
                                 <select class="orderItemDeliverySelect">
-                                    <option>¿ìµİ ÃâÓÊ·Ñ</option>
+                                    <option>å¿«é€’ å…é‚®è´¹</option>
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="orderItemTR">
                             <td class="orderItemFirstTD">
                                 <img width="20" src="http://how2j.cn/tmall/img/productSingle_middle/3796.jpg" class="orderItemImg" />
                             </td>
                             <td class="orderItemProductInfo">
-                                <a class="orderItemProductLink" href="#">¹«ÖÚÖÇÄÜÉ¨µØ»úÆ÷ÈË¼ÒÓÃÈ«×Ô¶¯µç¶¯Çå½àµØÌº²ÁÍÏµØÒ»Ìå»úÎü³¾Æ÷</a>
-                                <img title="Ö§³ÖĞÅÓÃ¿¨Ö§¸¶" src="img/site/creditcard.png" />
-                                <img title="Ïû·ÑÕß±£ÕÏ·şÎñ,³ĞÅµ7ÌìÍË»õ" src="img/site/7day.png">
-                                <img title="Ïû·ÑÕß±£ÕÏ·şÎñ,³ĞÅµÈçÊµÃèÊö" src="img/site/promise.png">
+                                <a class="orderItemProductLink" href="#">å…¬ä¼—æ™ºèƒ½æ‰«åœ°æœºå™¨äººå®¶ç”¨å…¨è‡ªåŠ¨ç”µåŠ¨æ¸…æ´åœ°æ¯¯æ“¦æ‹–åœ°ä¸€ä½“æœºå¸å°˜å™¨</a>
+                                <img title="æ”¯æŒä¿¡ç”¨å¡æ”¯ä»˜" src="img/site/creditcard.png" />
+                                <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡,æ‰¿è¯º7å¤©é€€è´§" src="img/site/7day.png">
+                                <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡,æ‰¿è¯ºå¦‚å®æè¿°" src="img/site/promise.png">
                             </td>
                             <td>
-                                <span class="orderItemProductPrice">£¤2,124.15</span>
+                                <span class="orderItemProductPrice">ï¿¥2,124.15</span>
                             </td>
                             <td>
                                 <span class="orderItemProductNumber">1</span>
                             </td>
                             <td>
-                                <span class="orderItemUnitSum">£¤2,124.15</span>
+                                <span class="orderItemUnitSum">ï¿¥2,124.15</span>
                             </td>
                             
                         </tr>
@@ -199,29 +317,29 @@
                 </table>
                 <div class="orderItemSumDiv">
                     <div class="pull-left">
-                        <span class="leaveMessageText">¸øÂô¼ÒÁôÑÔ£º</span>
+                        <span class="leaveMessageText">ç»™å–å®¶ç•™è¨€ï¼š</span>
                         <span>
                             <img src="img/site/leaveMessage.png" class="leaveMessageImg"/>
                         </span>
                         <span class="leaveMessageTextareaSpan" style="display:none;">
                             <textarea class="leaveMessageTextarea" name="userMessage"></textarea>
                             <div>
-                                <span>»¹¿ÉÒÔÊäÈë200¸ö×Ö·û</span>
+                                <span>è¿˜å¯ä»¥è¾“å…¥200ä¸ªå­—ç¬¦</span>
                             </div>
                         </span>
                     </div>
-                    <span class="pull-right">µêÆÌºÏ¼Æ£¨º¬ÔË·Ñ£©£º£¤9,152.25</span>
+                    <span class="pull-right">åº—é“ºåˆè®¡ï¼ˆå«è¿è´¹ï¼‰ï¼šï¿¥9,152.25</span>
                 </div>
             </div>
             <div style="clear:both"></div>
             <div class="orderItemTotalSumDiv">
                 <div class="pull-right">
-                    <span>Êµ¸¶¿î£º</span>
-                    <span class="orderItemTotalSumSpan">£¤9,152.25</span>
+                    <span>å®ä»˜æ¬¾ï¼š</span>
+                    <span class="orderItemTotalSumSpan">ï¿¥9,152.25</span>
                 </div>
             </div>
             <div class="submitOrderDiv">
-                <button class="submitOrderButton" type="button">Ìá½»¶©µ¥</button>
+                <button class="submitOrderButton" type="button">æäº¤è®¢å•</button>
             </div>
         </div>
     </body>
