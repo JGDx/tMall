@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <title>123</title>
         <script src="BootStrap/js/jquery/2.0.0/jquery.min.js"></script>
         <link href="BootStrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
@@ -140,19 +141,19 @@
                     var oiid = $(this).attr("oiid");
                     var price = $(".cartProductItemSmallSumPrice[oiid=" + oiid + "]").text();
                     price = price.replace(/,/g, "");
-                    price = price.replace(/£¤/g, "");
+                    price = price.replace(/ï¿¥/g, "");
                     sum += new Number(price);
                     var num = $(".orderItemNumberSetting[oiid=" + oiid + "]").val();
                     totalNumber += new Number(num);
                 })
-                $('span.cartSumPrice').html("£¤" + formatMoney(sum));
-                $('span.carTitlePrice').html("£¤" + formatMoney(sum));
+                $('span.cartSumPrice').html("ï¿¥" + formatMoney(sum));
+                $('span.carTitlePrice').html("ï¿¥" + formatMoney(sum));
                 $('span.cartSumNumber').html(totalNumber);
             }
             function syncPrice(pid, num, price) {
                 $('.orderItemNumberSetting[pid=' + pid+']').val(num);
                 var cartProductItemSmallSumPrice = formatMoney(num * price);
-                $('.cartProductItemSmallSumPrice[pid=' + pid + ']').html("£¤" + cartProductItemSmallSumPrice);
+                $('.cartProductItemSmallSumPrice[pid=' + pid + ']').html("ï¿¥" + cartProductItemSmallSumPrice);
                 calcCartSumPriceAndNumber();
             }
             
@@ -295,22 +296,22 @@
         </style>
         <div class="cartDiv">
             <div class="carTitle pull-right">
-                <span>ÒÑÑ¡ÉÌÆ· £¨²»º¬ÔË·Ñ£©</span>
-                <span class="carTitlePrice">£¤0.00</span>
-                <button class="createOrderButton" style="background-color:rgb(170,170,170);" disabled="disabled">½á Ëã</button>
+                <span>å·²é€‰å•†å“ ï¼ˆä¸å«è¿è´¹ï¼‰</span>
+                <span class="carTitlePrice">ï¿¥0.00</span>
+                <button class="createOrderButton" style="background-color:rgb(170,170,170);" disabled="disabled">ç»“ ç®—</button>
             </div>
             <div class="cartProductList">
                 <table class="cartProductTable">
                     <thead>
                         <tr>
                             <th class="selectAndImage">
-                                <img src="img/site/cartNotSelected.png" class="selectAllItem" selectit="false" />È«Ñ¡
+                                <img src="img/site/cartNotSelected.png" class="selectAllItem" selectit="false" />å…¨é€‰
                             </th>
-                            <th>ÉÌÆ·ĞÅÏ¢</th>
-                            <th>µ¥¼Û</th>
-                            <th>ÊıÁ¿</th>
-                            <th >½ğ¶î</th>
-                            <th >²Ù×÷</th>
+                            <th>å•†å“ä¿¡æ¯</th>
+                            <th>å•ä»·</th>
+                            <th>æ•°é‡</th>
+                            <th >é‡‘é¢</th>
+                            <th >æ“ä½œ</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -322,17 +323,17 @@
                             </td>
                             <td>
                                 <div class="cartProductLinkOutDiv">
-                                    <a class="cartProductLink" href="#">ÃÀ¹úiRobotÉ¨µØ»úÆ÷ÈËÎü³¾Æ÷È«×Ô¶¯¼ÒÓÃÖÇÄÜÉ¨µØ»ú650 ÌìÃ¨µçÆ÷³Ç</a>
+                                    <a class="cartProductLink" href="#">ç¾å›½iRobotæ‰«åœ°æœºå™¨äººå¸å°˜å™¨å…¨è‡ªåŠ¨å®¶ç”¨æ™ºèƒ½æ‰«åœ°æœº650 å¤©çŒ«ç”µå™¨åŸ</a>
                                     <div class="cartProductLinkInnerDiv">
-                                        <img title="Ö§³ÖĞÅÓÃ¿¨Ö§¸¶" src="img/site/creditcard.png" />
-                                        <img title="Ïû·ÑÕß±£ÕÏ·şÎñ£¬³ĞÅµ7ÌìÍË»õ" src="img/site/7day.png" />
-                                        <img title="Ïû·ÑÕß±£ÕÏ·şÎñ£¬³ĞÅµÈçÊµÃèÊö" src="img/site/promise.png" />
+                                        <img title="æ”¯æŒä¿¡ç”¨å¡æ”¯ä»˜" src="img/site/creditcard.png" />
+                                        <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡ï¼Œæ‰¿è¯º7å¤©é€€è´§" src="img/site/7day.png" />
+                                        <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡ï¼Œæ‰¿è¯ºå¦‚å®æè¿°" src="img/site/promise.png" />
                                     </div>
                                 </div>
                             </td>
                             <td>
-                                <span class="cartProductItemOringalPrice">£¤7580.0</span>
-                                <span class="cartProductItemPromotionPrice">£¤5306.0</span>
+                                <span class="cartProductItemOringalPrice">ï¿¥7580.0</span>
+                                <span class="cartProductItemPromotionPrice">ï¿¥5306.0</span>
                             </td>
                             <td>
                                 <div class="cartProductChangeNumberDiv">
@@ -344,10 +345,10 @@
                                 </div>
                             </td>
                             <td>
-                                <span pid="365" oiid="936" class="cartProductItemSmallSumPrice">£¤5,306.00</span>
+                                <span pid="365" oiid="936" class="cartProductItemSmallSumPrice">ï¿¥5,306.00</span>
                             </td>
                             <td>
-                                <a href="#" oiid="936" class="deleteOrderItem">É¾³ı</a>
+                                <a href="#" oiid="936" class="deleteOrderItem">åˆ é™¤</a>
                             </td>
                         </tr>
                         <tr class="cartProductItemTR" oiid="935">
@@ -358,17 +359,17 @@
                             </td>
                             <td>
                                 <div class="cartProductLinkOutDiv">
-                                    <a class="cartProductLink" href="#nowhere">À«ÍÈ¿ãÈı¼şÌ××°Å®ÏÄ×°2016ĞÂ¿î´óÂëÑ©·ÄÊ±ÉĞĞİÏĞÆøÖÊÃŞÂé¾Å·Ö¿ã³±</a>
+                                    <a class="cartProductLink" href="#nowhere">é˜”è…¿è£¤ä¸‰ä»¶å¥—è£…å¥³å¤è£…2016æ–°æ¬¾å¤§ç é›ªçººæ—¶å°šä¼‘é—²æ°”è´¨æ£‰éº»ä¹åˆ†è£¤æ½®</a>
                                     <div class="cartProductLinkInnerDiv">
-                                        <img title="Ö§³ÖĞÅÓÃ¿¨Ö§¸¶" src="http://how2j.cn/tmall/img/site/creditcard.png">
-                                        <img title="Ïû·ÑÕß±£ÕÏ·şÎñ,³ĞÅµ7ÌìÍË»õ" src="http://how2j.cn/tmall/img/site/7day.png">
-                                        <img title="Ïû·ÑÕß±£ÕÏ·şÎñ,³ĞÅµÈçÊµÃèÊö" src="http://how2j.cn/tmall/img/site/promise.png">
+                                        <img title="æ”¯æŒä¿¡ç”¨å¡æ”¯ä»˜" src="http://how2j.cn/tmall/img/site/creditcard.png">
+                                        <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡,æ‰¿è¯º7å¤©é€€è´§" src="http://how2j.cn/tmall/img/site/7day.png">
+                                        <img title="æ¶ˆè´¹è€…ä¿éšœæœåŠ¡,æ‰¿è¯ºå¦‚å®æè¿°" src="http://how2j.cn/tmall/img/site/promise.png">
                                     </div>
                                 </div>
                             </td>
                             <td>
-                                <span class="cartProductItemOringalPrice">£¤235.0</span>
-                                <span class="cartProductItemPromotionPrice">£¤152.75</span>
+                                <span class="cartProductItemOringalPrice">ï¿¥235.0</span>
+                                <span class="cartProductItemPromotionPrice">ï¿¥152.75</span>
                             </td>
                             <td>
                                 <div class="cartProductChangeNumberDiv">
@@ -381,11 +382,11 @@
                              </td>
                             <td>
                                 <span pid="809" oiid="935" class="cartProductItemSmallSumPrice">
-                                £¤152.75
+                                ï¿¥152.75
                                 </span>
                             </td>
                             <td>
-                                <a href="#nowhere" oiid="935" class="deleteOrderItem">É¾³ı</a>
+                                <a href="#nowhere" oiid="935" class="deleteOrderItem">åˆ é™¤</a>
                             </td>
                         </tr>
                     </tbody>
@@ -393,12 +394,12 @@
             </div>
             <div class="cartFoot">
                 <img src="img/site/cartNotSelected.png" class="selectAllItem" selectit="false" />
-                <span>È«Ñ¡</span>
+                <span>å…¨é€‰</span>
                 <div class="pull-right">
-                    <span>ÒÑÑ¡ÉÌÆ· <span class="cartSumNumber">0</span> ¼ş</span>
-                    <span>ºÏ¼Æ£¨²»º¬ÔË·Ñ£©£º</span>
-                    <span class="cartSumPrice">£¤0.00</span>
-                    <button class="createOrderButton" style="background-color:rgb(170,170,170);" disabled="disabled">½á Ëã</button>
+                    <span>å·²é€‰å•†å“ <span class="cartSumNumber">0</span> ä»¶</span>
+                    <span>åˆè®¡ï¼ˆä¸å«è¿è´¹ï¼‰ï¼š</span>
+                    <span class="cartSumPrice">ï¿¥0.00</span>
+                    <button class="createOrderButton" style="background-color:rgb(170,170,170);" disabled="disabled">ç»“ ç®—</button>
                 </div>
             </div>
         </div>
