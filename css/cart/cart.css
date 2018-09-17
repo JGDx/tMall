@@ -1,0 +1,165 @@
+body {
+    font-size: 12px;
+    font-family: Arial;
+}
+
+div.cartDiv {
+    margin: 30px auto;
+    max-width: 1013px;
+    color: black;
+}
+
+span.carTitlePrice {
+    color: #C40000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+
+div.carTitle button {
+    border-radius: 2px;
+    background-color: #AAAAAA;
+    border: 1px solid #AAAAAA;
+    height: 25px;
+    width: 53px;
+    color: white;
+}
+
+div.cartFoot {
+    background-color: #E5E5E5;
+    line-height: 50px;
+    margin: 20px 0px;
+    color: black;
+    padding-left: 20px;
+}
+
+    div.cartFoot button {
+        background-color: #AAAAAA;
+        border: 1px solid #AAAAAA;
+        width: 120px;
+        height: 50px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+
+img.cartProductItemIfSelected, img.selectAllItem {
+    cursor: pointer;
+}
+
+span.cartSumNumber {
+    color: #C40000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+span.cartSumPrice {
+    color: #C40000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+table.cartProductTable {
+    width: 100%;
+    font-size: 12px;
+}
+
+tr.cartProductItemTR {
+    border: 1px solid #CCCCCC;
+}
+
+    tr.cartProductItemTR td {
+        padding: 20px 20px;
+    }
+
+table.cartProductTable th {
+    font-weight: normal;
+    color: #3C3C3C;
+    padding: 20px 20px;
+}
+
+img.cartProductImg {
+    padding: 1px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #EEEEEE;
+}
+
+table.cartProductTable th.selectAndImage {
+    width: 140px;
+}
+
+div.cartProductLinkOutDiv {
+    position: relative;
+    height: 80px;
+}
+
+a.cartProductLink {
+    color: #3C3C3C;
+}
+
+    a.cartProductLink:hover {
+        color: #C40000;
+        text-decoration: underline;
+    }
+
+div.cartProductLinkInnerDiv {
+    position: absolute;
+    bottom: 0px;
+    height: 20px;
+}
+
+span.cartProductItemOringalPrice {
+    text-decoration: line-through;
+    color: #9C9C9C;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+span.cartProductItemPromotionPrice {
+    color: #C40000;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.cartProductChangeNumberDiv {
+    width: 80px;
+    border: 1px solid #E5E5E5;
+}
+
+    div.cartProductChangeNumberDiv a {
+        width: 14px;
+        display: inline-block;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+    }
+
+    div.cartProductChangeNumberDiv input {
+        width: 42px;
+        border: 1px solid #AAAAAA;
+        display: inline-block;
+    }
+
+span.cartProductItemSmallSumPrice {
+    color: #C40000;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Arial;
+}
+
+a.deleteOrderItem {
+    width: 20px;
+}
+
+
+
+span.cartProductItemMoney{
+    color:#C40000;
+    font-weight:bold;
+    font-size:14px;
+    font-family:Arial;
+}

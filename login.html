@@ -1,107 +1,171 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-        <title>123</title>
-        <script src="BootStrap/js/jquery/2.0.0/jquery.min.js"></script>
-        <link href="BootStrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
-        <script src="BootStrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <style>
-            div.simpleLogo{
-                padding:32px 0px;
-            }
-            img.loginBackgroundImg{
-                display:block;
-                margin:0px auto;
-            }
-            div.loginSmallDiv{
-                background-color:white;
-                position:absolute;
-                top:180px;
-                right:80px;
-                width:350px;
-                height:400px;
-                padding:60px 25px 80px 25px;
-            }
-            div.login_acount_text{
-                color:#3C3C3C;
-                font-size:16px;
-                font-weight:bold;
-            }
-            div.loginInput{
-                margin:20px 0px;
-                border:1px solid #CBCBCB;
-            }
-            div.loginInput span.loginInputIcon{
-                width:40px;
-                height:40px;
-                margin:0px;
-                background-color:#CBCBCB;
-                display:inline-block;
-            }
-            span.loginInputIcon span.glyphicon{
-                font-size:22px;
-                position:relative;
-                left:9px;
-                top:9px;
-                color:#606060;
-            }
-           div.loginInput input{
-               display:inline-block;
-               border:0px solid transparent;
-               width:244px;
-               height:30px;
-               position:relative;
-               left:6px;
-               top:4px;
-           }
-           body{
-               font-size:12px;
-               font-family:Arial;
-           }
-           a{
-               color:#999;
-           }
-           a:hover{
-               text-decoration:none;
-               color:#C40000;
-           }
-           button.redButton{
-               background-color:#C40000;
-               color:white;
-               font-weight:bold;
-               font-size:14px;
-           }
-        </style>
-        <div class="loginDiv">
-            <div class="simpleLogo">
-                <img src="img/site/simpleLogo.png" />
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Insert title here</title>
+    <script src="BootStrap/js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="BootStrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="BootStrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <link href="css/public/public.css" rel="stylesheet" />
+    <script src="js/public/public.js"></script>
+    <link href="css/login/login.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="top">
+        <a href="index.html">
+            <span class="glyphicon glyphicon-home redColor"></span>
+            天猫首页
+        </a>
+        <span>喵，欢迎来天猫</span>
+        <a href="login.html">请登陆</a>
+        <a href="register.html">免费注册</a>
+        <span class="pull-right">
+            <a href="bought.html">我的订单</a>
+            <a href="cart.html">
+                <span class="glyphicon glyphicon-shopping-cart redColor"></span>
+                购物车<strong>0</strong>件
+            </a>
+        </span>
+    </nav>
+    <div style="clear:both"></div>
+    <div>
+        <a href="#">
+            <img class="logo" src="img/site/logo.gif" id="logo">
+        </a>
+        <div class="searchDiv">
+            <input type="text" placeholder="时尚男鞋 太阳镜" name="keyword">
+            <button class="searchButton" type="submit">搜索</button>
+            <div class="searchBelow">
+                <span><a href="sort.html">平衡车</a><span>|</span></span>
+                <span><a href="sort.html">扫地机器人</a><span>|</span></span>
+                <span><a href="sort.html">原汁机</a><span>|</span></span>
+                <span><a href="sort.html">冰箱</a></span>
             </div>
-            <img src="img/site/loginBackground.png" class="loginBackgroundImg" id="loginBackgroundImg"/>
-            <div class="loginSmallDiv" id="loginSmallDiv">
-                <div class="login_acount_text">账户登陆</div>
-                <div class="loginInput">
-                    <span class="loginInputIcon">
-                        <span class="glyphicon glyphicon-user"></span>
-                    </span>
-                    <input type="text" placeholder="手机/会员名/邮箱" name="name" id="name" />
+        </div>
+    </div>
+    <div style="clear:both"></div>
+
+    <!--  这里放入网页内容 -->
+    <div class="loginDiv">
+        <div class="simpleLogo">
+            <img src="img/site/simpleLogo.png" />
+        </div>
+        <img src="img/site/loginBackground.png" class="loginBackgroundImg" id="loginBackgroundImg" />
+        <div class="loginSmallDiv" id="loginSmallDiv">
+            <div class="login_acount_text">账户登陆</div>
+            <div class="loginInput">
+                <span class="loginInputIcon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" placeholder="手机/会员名/邮箱" name="name" id="name" />
+            </div>
+            <div class="loginInput">
+                <span class="loginInputIcon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input type="password" placeholder="密码" name="password" id="password" />
+            </div>
+            <div>
+                <a class="notImplementLink" href="#">忘记登陆密码</a>
+                <a class="pull-right" href="#">免费注册</a>
+            </div>
+            <div style="margin-top:20px">
+                <button type="button" class="btn btn-block redButton" onclick="window.location.href='index.html'">登陆</button>
+            </div>
+        </div>
+    </div>
+    <!--  网页内容结束 -->
+
+    <div class="footer" style="display:block" id="footer">
+        <div class="footer_ensure" id="footer_ensure">
+            <a><img src="img/site/ensure.png"></a>
+        </div>
+        <div class="footer_desc" id="footer_desc">
+            <div class="footer_desc_center">
+                <div class="descColumn">
+                    <span class="descColumnTitle">购物指南</span>
+                    <a href="#">免费注册</a>
+                    <a href="#">开通支付宝</a>
+                    <a href="#">支付宝充值</a>
                 </div>
-                <div class="loginInput">
-                    <span class="loginInputIcon">
-                        <span class="glyphicon glyphicon-lock"></span>
-                    </span>
-                    <input type="password" placeholder="密码" name="password" id="password" />
+                <div class="descColumn">
+                    <span class="descColumnTitle">天猫保障</span>
+                    <a href="#">发票保障</a>
+                    <a href="#">售后规则</a>
+                    <a href="#">缺货赔付</a>
                 </div>
-                <div>
-                    <a class="notImplementLink" href="#">忘记登陆密码</a>
-                    <a class="pull-right" href="#">免费注册</a>
+                <div class="descColumn">
+                    <span class="descColumnTitle">支付方式</span>
+                    <a href="#">快捷支付</a>
+                    <a href="#">蚂蚁花呗</a>
+                    <a href="#">货到付款</a>
                 </div>
-                <div style="margin-top:20px">
-                    <button type="button" class="btn btn-block redButton">登陆</button>
+                <div class="descColumn">
+                    <span class="descColumnTitle">商家服务</span>
+                    <a href="#">商家入驻</a>
+                    <a href="#">商家中心</a>
+                    <a href="#">天猫智库</a>
+                    <a href="#">天猫规则</a>
+                    <a href="#">物流服务</a>
+                    <a href="#">喵言喵语</a>
+                    <a href="#">运营服务</a>
+                </div>
+                <div class="descColumn">
+                    <span class="descColumnTitle">手机天猫</span>
+                    <a href="#"><img src="img/site/ma.png"></a>
                 </div>
             </div>
         </div>
-    </body>
+        <div style="clear:both"></div>
+        <img src="img/site/cateye.png" class="cateye" id="cateye">
+        <div class="copyright" id="copyright">
+            <div class="white_link">
+                <a href="#">关于天猫</a>
+                <a href="#">帮助中心</a>
+                <a href="#">开放平台</a>
+                <a href="#">诚聘英才</a>
+                <a href="#">联系我们</a>
+                <a href="#">网站使用</a>
+                <a href="#">法律声明</a>
+                <a href="#">知识产权</a>
+                <a href="#">廉政举报</a>
+            </div>
+            <div class="white_link">
+                <a href="#nowhere"> 阿里巴巴集团</a><span class="slash">|</span>
+                <a href="#nowhere"> 淘宝网</a><span class="slash">|</span>
+                <a href="#nowhere">天猫 </a><span class="slash">|</span>
+                <a href="#nowhere">  聚划算</a><span class="slash">|</span>
+                <a href="#nowhere">全球速卖通</a><span class="slash">|</span>
+                <a href="#nowhere">阿里巴巴国际交易市场</a><span class="slash">|</span>
+                <a href="#nowhere">1688</a><span class="slash">|</span>
+                <a href="#nowhere">阿里妈妈</a><span class="slash">|</span>
+                <a href="#nowhere">  阿里旅行·去啊  </a><span class="slash">|</span>
+                <a href="#nowhere">  阿里云计算    </a><span class="slash">|</span>
+                <a href="#nowhere">  阿里通信     </a><span class="slash">|</span>
+                <a href="#nowhere">  YunOS    </a><span class="slash">|</span>
+                <a href="#nowhere">  阿里旅行·去啊  </a><span class="slash">|</span>
+                <a href="#nowhere">   万网  </a><span class="slash">|</span>
+                <a href="#nowhere">  高德   </a><span class="slash">|</span>
+                <a href="#nowhere"> 优视    </a><span class="slash">|</span>
+                <a href="#nowhere">  友盟   </a><span class="slash">|</span>
+                <a href="#nowhere">  虾米   </a><span class="slash">|</span>
+                <a href="#nowhere">  天天动听 </a><span class="slash">|</span>
+                <a href="#nowhere">  来往   </a><span class="slash">|</span>
+                <a href="#nowhere">  钉钉   </a><span class="slash">|</span>
+                <a href="#nowhere">  支付宝      </a>
+            </div>
+            <div class="license">
+                <span>增值电信业务经营许可证： 浙B2-20110446</span>
+                <span>网络文化经营许可证：浙网文[2015]0295-065号</span>
+                <span>互联网医疗保健信息服务 审核同意书 浙卫网审【2014】6号 </span>
+                <span>互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005</span>
+                <div class="copyRightYear">© 2003-2016 TMALL.COM 版权所有</div>
+                <div>
+                    <img src="img/site/copyRight1.jpg">
+                    <img src="img/site/copyRight2.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
