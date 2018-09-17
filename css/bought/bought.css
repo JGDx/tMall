@@ -186,3 +186,13 @@ a {
 		text-decoration: none;
 		color: #c40000;
 	}
+
+button.orderListItemPay {
+	border-width: 0px;
+	background-color: #C40000;
+	border-radius: 2px;
+	color: white;
+	padding: 6px 12px;
+	font-size: 12px;
+	font-weight: bold;
+}

@@ -11,9 +11,12 @@ $(function () {
         $(this).parent('div').addClass('selectedOrderType');
     });
     $('.orderListItemConfirm').click(function () {
-        window.location.href = 'payPage.html';
+        window.location.href = 'confirmPay.html';
     });
     $('.orderListItemReview').click(function () {
         window.location.href = 'review.html';
     });
+    $('.orderListItemPay').click(function () {
+        window.location.href = 'payPage.html';
+    })
 });
