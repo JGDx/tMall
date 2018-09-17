@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BootStrap\\css",
+    "\\css\\bought"
   ],
-  "SelectedNode": "\\buyPage.html",
+  "SelectedNode": "\\css",
   "PreviewInSolutionExplorer": false
 }

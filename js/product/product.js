@@ -57,8 +57,5 @@ $(function () {
         $('.productDetailDiv').show();
         $('.productPageDiv').hide();
     });
-    $('homepageCategoryProducts a').click(function () {
-        console.log(1);
-        window.location.href = "product.html";
-    });
+    
 });
