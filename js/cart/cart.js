@@ -79,6 +79,9 @@ $(function () {
         }
         syncPrice(pid, num, price);
     })
+    $('.createOrderButton').click(function () {
+        window.location.href = 'buyPage.html';
+    })
 });
 function formatMoney(num) {
     num = num.toString().replace(/\$|\,/g, '');
